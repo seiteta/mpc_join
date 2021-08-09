@@ -69,14 +69,6 @@ fn main() {
                         .into_secret_modp()
                         .expect("there should be a first value for DP 1"),
                 );
-                // Idem with the first value from the data provider 2
-                row_data_consumer.append(
-                    row_dp_2
-                        .next_col()
-                        .unwrap()
-                        .into_secret_modp()
-                        .expect("there should be a first value for DP 2"),
-                );
                 // Now let us create a composite value = 2 * v2₁ + 3 * v2₂
                 let v2_dp_1 = row_dp_1
                     .next_col()
@@ -96,6 +88,15 @@ fn main() {
                 row_data_consumer.append(composite);
                 // that is it for this row;
                 // it will be automatically flushed to the data consumer
+                
+                // Idem with the first value from the data provider 2
+                row_data_consumer.append(
+                    row_dp_2
+                        .next_col()
+                        .unwrap()
+                        .into_secret_modp()
+                        .expect("there should be a first value for DP 2"),
+                );
                 break;
             } else if SecretI64::from(id_dp_1)
                 .lt(SecretI64::from(id_dp_2))
