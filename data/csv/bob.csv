@@ -1,5 +1,5 @@
-id,medical_info_1,medical_info_2
-12451,45567,78
+social_security_number,patient_id,scanner_result
+12451,45567,78  
 17600,82721,83
 23603,68345,78
 37600,58982,89
