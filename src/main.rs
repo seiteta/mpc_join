@@ -91,7 +91,7 @@ fn main() {
                 // We "lift" the clear text scalar values in Zₚ using `ClearModp`
                 // then perform the secret multiplication -> the result is a `SecretModP`
                 let composite: SecretModp =
-                    v2_dp_1 / ClearModp::from(2) + v2_dp_2 / ClearModp::from(2) ;
+                    v2_dp_1 ;
                 // now reveal it to the data consumer
                 row_data_consumer.append(composite);
                 // that is it for this row;
