@@ -93,7 +93,7 @@ fn main() {
                 let composite: SecretModp =
                     ClearModp::from(2) * v2_dp_1 + ClearModp::from(3) * v2_dp_2;
                 // now reveal it to the data consumer
-                row_data_consumer.append(composite);
+                row_data_consumer.append(composite/100);
                 // that is it for this row;
                 // it will be automatically flushed to the data consumer
                 break;
