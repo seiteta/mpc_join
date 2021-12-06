@@ -1,3 +1,2 @@
 [participants.0]
-output_column_names = [ "computed_medical_score", "social_security_number", "hearbeat" ]
-
+output_column_names = [ "heartbeat", "bmi", "scanner_result" ]
